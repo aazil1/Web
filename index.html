@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bernard Joseph Sagon | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    #home {
+      background: linear-gradient(135deg, #ece9e6, #ffffff);
+      background-image: url('https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1500&q=80');
+      background-size: cover;
+      background-position: center;
+      color: rgb(0, 0, 0);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #home::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    #home > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    #about {
+      background-color: #ced4da;
+    }
+
+    #services{
+      background-color: #ced4da;
+    }
+    #contact {
+      background-color: #ced4da;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      margin-top: 20px;
+      margin-left: 80px;
+    }
+
+    .info-box {
+      background: rgb(255, 255, 255);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    body {
+      padding-top: 70px;
+    }
+
+    .nav-link {
+    position: relative;
+    color: black;
+    transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    transition: width 0.3s;
+    }
+
+    .nav-link:hover {
+    color: #007bff;
+    }
+
+    .nav-link:hover::after {
+    width: 100%;
+    }
+
+    .info-box {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    }
+
+    .info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #f1f1f1;
+    }
+
+    .profile-pic {
+    margin-right: 100px;
+    width: 220px;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-pic:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(65, 77, 255, 0.25);
+    }
+
+    #home p.lead {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-top: 10px;
+    }
+
+    .lead:hover{
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      
+    }
+
+    .btn-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    }
+
+    .mt-3:hover{
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    }
+
+    .texta{
+      color: white;
+      margin-top: 10px;
+      }
+
+    .typewrite::after {
+    content: '|';
+    animation: blink 1s infinite;
+    color: white;
+    margin-left: 2px;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+      }
+
+      #services .info-box::before {
+      content: "";
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 123, 255, 0.2);
+      transition: bottom 0.4s ease;
+      z-index: 0;
+    }
+
+    #services .info-box:hover::before {
+      bottom: 0;
+    }
+
+    #services .info-box h5,
+    #services .info-box p {
+      position: relative;
+      z-index: 1;
+    }
+
+    #services .info-box {
+      position: relative;
+      overflow: hidden;
+    }
+
+      
+</style>
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#home">My personal website</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <img src="c:\Users\admin\Downloads\Photoshop\ME.png" class="profile-pic mt-3" />
+    <div class="texta">
+      <h1><span class="typewrite" data-period="2000" data-type='[ "BERNARD JOSEPH SAGON" ]'></span></h1>
+    <h3 class="lead">An IT student at Global Reciprocal College</h3>
+    <p class="lead">Aspiring Designer | Creative Thinker | Model Builder</p>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section id="services">
+    <h1>My Services</h1>
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="info-box">
+            <h5>Graphic Design</h5>
+            <p>Creating visually compelling designs for posters, social media, and branding with attention to detail and creativity.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-box">
+            <h5>Modeling</h5>
+            <p>Designing miniatures, dioramas, and model kits using 3D tools and hands-on crafting techniques.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-box">
+            <h5>Photography & Videography</h5>
+            <p>Capturing moments and telling stories through well-composed images and engaging video edits.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- About Section -->
+<section id="about">
+  <h1>About Me</h1>
+  <div class="container mt-4">
+    <div class="row align-items-center">
+      <!-- Left: Image -->
+      <div class="col-md-4 text-center">
+        <img src="c:\Users\admin\Desktop\f5d2082b-2e6d-4daf-a66f-a66ea45d3fea.jpg" class="img-fluid rounded shadow profile-pic" alt="My Photo">
+      </div>
+      
+      <!-- Right: Intro, Skills, Hobbies -->
+      <div class="col-md-8">
+        <div class="info-box">
+          <h5>Hello, I'm Bernard</h5>
+          <p>I'm an IT student at Global Reciprocal College who enjoys creating, designing, and building. I love working on hands-on projects that let me be creative.</p>
+          
+          <hr>
+
+          <h6><strong>Skills</strong></h6>
+          <ul class="text-start">
+            <li>Graphic and digital design</li>
+            <li>3D modeling and miniature building</li>
+            <li>Photography and videography</li>
+            <li>Creative thinking & attention to detail</li>
+          </ul>
+
+          <h6 class="mt-3"><strong>Hobbies</strong></h6>
+          <ul class="text-start">
+            <li>Collecting miniature cars & building Gundam kits</li>
+            <li>Exploring perfume scents</li>
+            <li>Designing and assembling mini houses</li>
+            <li>Capturing moments through camera</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h1>Contact Me</h1>
+    <div class="container mt-4">
+      <form class="contact-form row justify-content-center">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Your Name">
+          <input type="email" class="form-control" placeholder="Your Email">
+          <input type="text" class="form-control" placeholder="Your Message">
+          <button type="submit" class="btn btn-dark mt-3">Send</button>
+        </div>
+      </form>
+      <div class="mt-4">
+        <p>Or contact me on:</p>
+        <a href="https://www.facebook.com/Bernard.sagon.0918" target="_blank" class="btn btn-primary m-1 btn-hover">Facebook</a>
+        <a href="https://www.instagram.com/aazil.95/" target="_blank" class="btn btn-danger m-1 btn-hover">Instagram</a>
+        <a href="mailto:sagonbench@gmail.com" class="btn btn-secondary m-1 btn-hover">Gmail</a>
+        <a href="https://www.tiktok.com/@aazil918" target="_blank" class="btn btn-dark m-1 btn-hover">TikTok</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function typeWriter(el, text, i = 0) {
+      if (i < text.length) {
+        el.innerHTML += text.charAt(i);
+        setTimeout(() => typeWriter(el, text, i + 1), 100);
+      }
+    }
+  
+    window.onload = function () {
+      const el = document.querySelector('.typewrite');
+      const text = el.getAttribute('data-type').replace(/[\[\]"]+/g, '');
+      typeWriter(el, text);
+    };
+  </script>
+  
+</body>
+
+</html>
